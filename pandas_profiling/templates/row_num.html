@@ -1,7 +1,7 @@
 {% include '_row_header.html' %}
-<div>
-    <div class="row">
-        <div class="">
+<div class="statistics-block">
+
+        <div class="statistics-block">
             <table class="stats ">
                 <tr>
                     <th>Distinct count</th>
@@ -30,7 +30,7 @@
             </table>
 
         </div>
-        <div class="">
+        <div class="statistics-block">
             <table class="stats ">
 
                 <tr>
@@ -51,17 +51,17 @@
                 </tr>
             </table>
         </div>
-    </div>
+
 </div>
-<div class="col-md-3 collapse in" id="minihistogram{{ values['varid'] }}">
+<div class="statistics-block collapse in" id="minihistogram{{ values['varid'] }}">
     <img src="{{ values['mini_histogram'] }}">
 
 </div>
 <div class="col-md-12 text-right">
-    <a role="button" data-toggle="collapse" data-target="#descriptives{{ values['varid'] }},#minihistogram{{ values['varid'] }}"
-       aria-expanded="false" aria-controls="collapseExample">
-        Toggle details
-    </a>
+    <button>
+        <label for="toggle_checkbox">Toggle details</label>
+    </button>
+    <input id="toggle_checkbox" type="checkbox" />
 </div>
 <div class="row collapse col-md-12" id="descriptives{{ values['varid'] }}">
     <ul class="nav nav-tabs" role="tablist">
