@@ -1,6 +1,6 @@
 <div class="row variablerow">
-    <div class="col-md-6 namecol">
-        <p class="h4">Dataset info</p>
+    <div class="statistics-block namecol">
+        <h2>Dataset info</h2>
         <table class="stats" style="margin-left: 1em;">
             <tbody>
             <tr>
@@ -26,8 +26,8 @@
             </tbody>
         </table>
     </div>
-    <div class="col-md-6 namecol">
-        <p class="h4">Variables types</p>
+    <div class="statistics-block namecol">
+        <h2>Variables types</h2>
         <table class="stats" style="margin-left: 1em;">
             <tbody>
             <tr>
@@ -62,9 +62,9 @@
         </table>
     </div>
     {% if messages %}
-    <div class="col-md-12" style="padding-left: 1em;">
+    <div class="statistics-block" style="padding-left: 1em;">
         
-        <p class="h4">Warnings</p>
+        <h2>Warnings</h2>
         <ul class="list-unstyled">{{ messages }} </ul>
     </div>
     {% endif %}
