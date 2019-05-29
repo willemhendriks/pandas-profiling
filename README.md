@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.com/pandas-profiling/pandas-profiling.svg?branch=master)](https://travis-ci.com/pandas-profiling/pandas-profiling)
 
-# MAINTAINERS WANTED - Notice of neglect
-This package does not have a current active maintainer. If you are interested to take on the role of main developer, feel free to reach out to @JosPolfliet.
+# Fork with goal to remove all .JS and Markdown.CSS
 
 # pandas-profiling
 
