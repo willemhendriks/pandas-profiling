@@ -59,11 +59,12 @@
 </div>
 <div class="col-md-12 text-right">
     <button>
-        <label for="toggle_checkbox">Toggle details</label>
+        <label for="toggle_checkbox_descriptives{{ values['varid'] }}">Toggle details</label>
     </button>
-    <input id="toggle_checkbox" type="checkbox" />
 </div>
-<div class="row collapse col-md-12" id="descriptives{{ values['varid'] }}">
+<input id="toggle_checkbox_descriptives{{ values['varid'] }}" type="checkbox" />
+
+<div class="descriptives-block" id="descriptives{{ values['varid'] }}">
     <ul class="nav nav-tabs" role="tablist">
         <li role="presentation" class="active"><a href="#quantiles{{ values['varid'] }}"
                                                   aria-controls="quantiles{{ values['varid'] }}" role="tab"
