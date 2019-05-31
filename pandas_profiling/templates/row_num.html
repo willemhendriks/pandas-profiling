@@ -65,21 +65,22 @@
 <input id="toggle_checkbox_descriptives{{ values['varid'] }}" type="checkbox" />
 
 <div class="descriptives-block" id="descriptives{{ values['varid'] }}">
-    <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#quantiles{{ values['varid'] }}"
-                                                  aria-controls="quantiles{{ values['varid'] }}" role="tab"
-                                                  data-toggle="tab">Statistics</a></li>
-        <li role="presentation"><a href="#histogram{{ values['varid'] }}" aria-controls="histogram{{ values['varid'] }}"
-                                   role="tab" data-toggle="tab">Histogram</a></li>
-        <li role="presentation"><a href="#common{{ values['varid'] }}" aria-controls="common{{ values['varid'] }}"
-                                   role="tab" data-toggle="tab">Common Values</a></li>
-        <li role="presentation"><a href="#extreme{{ values['varid'] }}" aria-controls="extreme{{ values['varid'] }}"
-                                   role="tab" data-toggle="tab">Extreme Values</a></li>
+    <ul class="descriptives-tabs">
+        <li class="descriptives-tabs"><label for="quantiles{{ values['varid'] }}">Statistics</label></li>
+        <li class="descriptives-tabs"><label for="histogram{{ values['varid'] }}">Histogram</label></li>
+        <li class="descriptives-tabs"><label for="common{{ values['varid'] }}">Common Values</label></li>
+        <li class="descriptives-tabs"><label for="extreme{{ values['varid'] }}">Extreme Values</label></li>
 
     </ul>
 
     <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active row" id="quantiles{{ values['varid'] }}">
+            
+    <input type="radio" class="descriptive_quantile" id="quantiles{{ values['varid'] }}" name="rb_{{ values['varid'] }}" value="rb1" checked="checked" />
+    <input type="radio" class="descriptive_histogram" id="histogram{{ values['varid'] }}" name="rb_{{ values['varid'] }}" value="rb2"/>
+    <input type="radio" class="descriptive_common" id="common{{ values['varid'] }}" name="rb_{{ values['varid'] }}" value="rb3"/>
+    <input type="radio" class="descriptive_extreme" id="extreme{{ values['varid'] }}" name="rb_{{ values['varid'] }}" value="rb4"/>
+
+    <div class="descriptive_quantile active" id="quantiles{{ values['varid'] }}">
             <div class="col-md-4 col-md-offset-1">
                 <p class="h4">Quantile statistics</p>
                 <table class="stats indent">
@@ -163,13 +164,13 @@
                 </table>
             </div>
         </div>
-        <div role="tabpanel" class="tab-pane col-md-8 col-md-offset-2" id="histogram{{ values['varid'] }}">
+        <div class="descriptive_histogram" class="tab-pane col-md-8 col-md-offset-2" id="histogram{{ values['varid'] }}">
             <img src="{{ values['histogram'] }}"/>
         </div>
-        <div role="tabpanel" class="tab-pane col-md-12" id="common{{ values['varid'] }}">
+        <div class="descriptive_common" class="tab-pane col-md-12" id="common{{ values['varid'] }}">
             {{ values['freqtable'] }}
         </div>
-        <div role="tabpanel" class="tab-pane col-md-12"  id="extreme{{ values['varid'] }}">
+        <div class="descriptive_extreme" class="tab-pane col-md-12"  id="extreme{{ values['varid'] }}">
             <p class="h4">Minimum 5 values</p>
             {{ values['firstn_expanded'] }}
             <p class="h4">Maximum 5 values</p>

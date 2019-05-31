@@ -9,6 +9,32 @@
             display: block;
         }
 
+        div.descriptive_quantile {
+            display: none;
+        }
+        div.descriptive_histogram {
+            display: none;
+        }
+        div.descriptive_common {
+            display: none;
+        }
+        div.descriptive_extreme {
+            display: none;
+        }
+
+        input.descriptive_quantile:checked ~ div.descriptive_quantile{
+            display: block;
+        }
+        input.descriptive_histogram:checked ~ div.descriptive_histogram{
+            display: block;
+        }
+        input.descriptive_common:checked ~ div.descriptive_common{
+            display: block;
+        }
+        input.descriptive_extreme:checked ~ div.descriptive_extreme{
+            display: block;
+        }
+
         .statistics-block {
             display: inline-block;
             vertical-align:top;
@@ -19,9 +45,34 @@
         button.toggle-details {
             border: none;
             color: #327ab7;
-            text-decoration: underline;
+            text-decoration: none;
             display: inline-block;
             font-size: 12pt;
+        }
+
+        button.toggle-details:hover {
+            text-decoration: underline;
+        }
+
+        ul.descriptives-tabs{
+            text-align: left;
+            list-style: none;
+            line-height: 32px;
+            min-width: 696px;
+            padding-top: 20px;
+            border-bottom: 1px solid #AAA;
+        }
+
+        ul.descriptives-tabs li{
+            margin: 0 10px;
+            padding: 0 10px;
+            border: 1px soled #AAA;
+            display: inline-block;
+        }
+
+        .ul.descriptives-tabs li.selected {
+          background: #FFF;
+          color: #000;
         }
 
         .variablerow {
